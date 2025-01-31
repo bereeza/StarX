@@ -1,0 +1,23 @@
+name: bug label
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  set-label:
+    permissions:
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: set label
+        if: contains(github.event.issue.title, 'bug')
+        run: |
+          curl -X POST \
+          --url https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/labels \
+          -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          -H 'content-type: application/json' \
+          -d '{
+              "labels": ["bug"]
+            }' \
+          --fail
