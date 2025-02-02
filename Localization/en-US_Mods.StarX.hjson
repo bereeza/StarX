@@ -1,1 +1,6 @@
-
+Items: {
+	WoodenStick: {
+		DisplayName: Wooden Stick
+		Tooltip: ""
+	}
+}
