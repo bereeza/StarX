@@ -3,4 +3,9 @@ Items: {
 		DisplayName: Wooden Stick
 		Tooltip: ""
 	}
+
+	StarFinger: {
+		DisplayName: Star Finger
+		Tooltip: ""
+	}
 }
