@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using StarX.WeaponEffects;  
+using StarX.VisualEffects;  
 
 namespace StarX.Weapon {
     public class StarFinger : ModItem {
@@ -11,8 +11,8 @@ namespace StarX.Weapon {
             Item.DamageType = DamageClass.Melee;
             Item.width = 64;
             Item.height = 64;
-            Item.damage = 1;
-            Item.knockBack = 15;
+            Item.damage = 9;
+            Item.knockBack = 10;
             Item.rare = ItemRarityID.Gray;
             Item.value = Item.buyPrice(silver: 1);
             Item.maxStack = 1;
@@ -24,7 +24,7 @@ namespace StarX.Weapon {
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox) {
-            if (Main.rand.NextBool(1)) {  
+            if (Main.rand.NextBool(3)) {  
                 Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Sparkle>());
             }
         }
