@@ -7,5 +7,10 @@ namespace StarX.SoundEffects {
             Volume = 1.0f,          
             PitchVariance = 0.2f   
         };
+
+        public static readonly SoundStyle Moan = new SoundStyle("StarX/SoundEffects/Moan") {
+            Volume = 1.0f,          
+            PitchVariance = 0.2f   
+        };
     }
 }

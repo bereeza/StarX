@@ -13,7 +13,7 @@ namespace StarX.Weapon {
             Item.width = 96;
             Item.height = 96;
             Item.damage = 1;
-            Item.knockBack = 45;
+            Item.knockBack = 35;
             Item.rare = ItemRarityID.Yellow;
             Item.value = Item.buyPrice(copper: 25);
             Item.maxStack = 1;
@@ -21,6 +21,11 @@ namespace StarX.Weapon {
             Item.useTime = 30;                    
             Item.useAnimation = 35;              
             Item.autoReuse = true;
+        }
+
+        public override bool? UseItem(Player player) {
+            SoundEngine.PlaySound(SoundEffects.ModSounds.Moan, player.position);
+            return base.UseItem(player);
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox) {
