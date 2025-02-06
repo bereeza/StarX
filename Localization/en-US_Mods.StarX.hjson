@@ -1,11 +1,16 @@
 Items: {
 	WoodenStick: {
 		DisplayName: Wooden Stick
-		Tooltip: ""
+		Tooltip: Why did you craft this?
 	}
 
 	StarFinger: {
 		DisplayName: Star Finger
-		Tooltip: ""
+		Tooltip: Almost the same
+	}
+
+	TrafficSign: {
+		DisplayName: Traffic Sign
+		Tooltip: This is something you only do with friends
 	}
 }
