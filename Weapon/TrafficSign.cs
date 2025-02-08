@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using StarX.VisualEffects;
@@ -20,12 +19,9 @@ namespace StarX.Weapon {
             Item.useStyle = ItemUseStyleID.Swing; 
             Item.useTime = 30;                    
             Item.useAnimation = 35;              
-            Item.autoReuse = true;
-        }
+            Item.autoReuse = true; 
 
-        public override bool? UseItem(Player player) {
-            SoundEngine.PlaySound(SoundEffects.ModSounds.Moan, player.position);
-            return base.UseItem(player);
+            Item.UseSound = SoundID.Item1;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox) {

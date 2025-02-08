@@ -13,4 +13,9 @@ Items: {
 		DisplayName: Traffic Sign
 		Tooltip: This is something you only do with friends
 	}
+
+	TheMostDangerousThing: {
+		DisplayName: The Most Dangerous Thing
+		Tooltip: ""
+	}
 }
