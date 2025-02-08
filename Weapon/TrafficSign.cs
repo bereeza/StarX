@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using StarX.VisualEffects;
@@ -13,14 +12,16 @@ namespace StarX.Weapon {
             Item.width = 96;
             Item.height = 96;
             Item.damage = 1;
-            Item.knockBack = 45;
+            Item.knockBack = 35;
             Item.rare = ItemRarityID.Yellow;
             Item.value = Item.buyPrice(copper: 25);
             Item.maxStack = 1;
             Item.useStyle = ItemUseStyleID.Swing; 
             Item.useTime = 30;                    
             Item.useAnimation = 35;              
-            Item.autoReuse = true;
+            Item.autoReuse = true; 
+
+            Item.UseSound = SoundID.Item1;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox) {

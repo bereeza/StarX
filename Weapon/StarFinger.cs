@@ -21,6 +21,8 @@ namespace StarX.Weapon {
             Item.useAnimation = 15;
             Item.crit = 6;
             Item.autoReuse = true;
+
+            Item.UseSound = SoundID.Item60;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox) {

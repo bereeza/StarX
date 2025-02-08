@@ -18,6 +18,8 @@ namespace StarX.Weapon {
             Item.useTime = 20;                    
             Item.useAnimation = 20;              
             Item.autoReuse = true;
+
+            Item.UseSound = SoundID.Item1;
         }
 
         public override void AddRecipes() {
